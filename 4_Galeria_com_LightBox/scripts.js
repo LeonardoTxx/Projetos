@@ -5,7 +5,9 @@ const lightboxClose = document.querySelector(".lightbox-close");
 
 galleryItems.forEach((item) => {
   item.addEventListener("click", () => {
-    const imageUrl = item.querySelector(".gallery-image").getAttribute("data-src");
+    const imageUrl = item
+      .querySelector(".gallery-image")
+      .getAttribute("data-src");
     lightboxImage.setAttribute("src", imageUrl);
     lightbox.style.display = "flex";
   });
